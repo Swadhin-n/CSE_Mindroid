@@ -5,42 +5,38 @@ import SecondPage from "../assets/IV_2A_2025.webp"
 import ThirdPage from "../assets/IV_2B_2025.webp"
 import FourthPage from "/images/event_gallery/placment_orent.webp"
 import FifthPage from "../assets/ACM_Elections.webp"
+import SixthPage from "../assets/CSE_RedFm.png"
 
 const slides = [
   {
     id: "slide1",
     img: FirstPage,
     desc: "Mindroid Digital Magazine 2023-24",
-    prev: "slide4",
-    next: "slide2",
   },
   {
     id: "slide2",
-    img: SecondPage,
-    desc: "Industrial Visit of 2nd Year Section A to RMC, Nagpur",
-    prev: "slide1",
-    next: "slide3",
+    img: SixthPage,
+    desc: "CSE Department's collaboration with Red FM",
   },
   {
     id: "slide3",
-    img: ThirdPage,
-    desc: "Industrial Visit of 2nd Year Section B to RMC, Nagpur",
-    prev: "slide2",
-    next: "slide4",
+    img: SecondPage,
+    desc: "Industrial Visit of 2nd Year Section A to RMC, Nagpur",
   },
   {
     id: "slide4",
-    img: FourthPage,
-    desc: "Placement Orientation Program for Final Year Students",
-    prev: "slide3",
-    next: "slide5",
+    img: ThirdPage,
+    desc: "Industrial Visit of 2nd Year Section B to RMC, Nagpur",
   },
   {
     id: "slide5",
+    img: FourthPage,
+    desc: "Placement Orientation Program for Final Year Students",
+  },
+  {
+    id: "slide6",
     img: FifthPage,
     desc: "ACM elections for the session 2025-26",
-    prev: "slide4",
-    next: "slide1",
   },
 ];
 
@@ -62,7 +58,7 @@ const Carousel = () => {
       <div className="flex align-center justify-center text-[#050a30] text-2xl sm:text-3xl font-bold my-4 text-center">
         <h2>MINDROID - Digital Magazine</h2>
       </div>
-      <div className="carousel relative w-full mx-4 md:w-[55vw] max-w-4xl h-[50vh] md:h-[80vh] aspect-video md:aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl/30 ring-1 ring-primary/10 md:mx-auto flex justify-center items-center">
+      <div className="carousel relative w-full mx-4 md:w-[75vw] max-w-6xl h-[50vh] md:h-[80vh] aspect-video md:aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl/30 ring-1 ring-primary/10 md:mx-auto flex justify-center items-center">
         {slides.map((slide, idx) => (
           <div
             key={slide.id}
