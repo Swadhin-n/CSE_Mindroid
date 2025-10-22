@@ -3,6 +3,21 @@ $(document).ready(function () {
   var prevBtn = $("#prev-page-btn");
   var nextBtn = $("#next-page-btn");
 
+  // Initialize Turn.js with responsive settings
+  function initFlipbook() {
+    var displayMode = window.innerWidth < 768 ? "single" : "double";
+
+    flipbook.turn({
+      autoCenter: true,
+      display: displayMode,
+      width: window.innerWidth < 768 ? window.innerWidth : 842,
+      height: window.innerWidth < 768 ? window.innerHeight : 595,
+    });
+
+    resizeFlipbook();
+  }
+
+  // Resize the flipbook proportionally
   function resizeFlipbook() {
     var containerWidth = $(".flipbook-container").width();
     var bookWidth = containerWidth;
@@ -11,18 +26,29 @@ $(document).ready(function () {
     flipbook.turn("size", bookWidth, bookHeight * 2);
   }
 
-  flipbook.turn({
-    autoCenter: true,
-    width: 842,
-    height: 595,
-  });
+  // Update display mode and resize dynamically
+  function updateLayout() {
+    if (!flipbook.data("turn")) return;
 
+    var mode = window.innerWidth < 768 ? "single" : "double";
+    flipbook.turn("display", mode);
+
+    var newWidth = window.innerWidth < 768 ? window.innerWidth : 842;
+    var newHeight = window.innerWidth < 768 ? window.innerHeight : 595;
+    flipbook.turn("size", newWidth, newHeight);
+  }
+
+  // Initialize on page load
+  initFlipbook();
+
+  // Handle resize/orientation changes
   $(window)
-    .on("resize", function () {
-      resizeFlipbook();
+    .on("resize orientationchange", function () {
+      updateLayout();
     })
     .trigger("resize");
 
+  // Navigation buttons
   prevBtn.on("click", function () {
     flipbook.turn("previous");
   });
@@ -40,7 +66,7 @@ $(document).ready(function () {
     $(this).addClass("tab-active");
   });
 
-  // Set initial active tab and button states
+  // Initial active tab
   $('.tabs .tab[data-page="1"]').addClass("tab-active");
   prevBtn.prop("disabled", true);
 
@@ -48,7 +74,7 @@ $(document).ready(function () {
   flipbook.bind("turned", function (event, page, view) {
     var totalPages = flipbook.turn("pages");
 
-    // Update buttons
+    // Update button states
     prevBtn.prop("disabled", page === 1);
     nextBtn.prop("disabled", page === totalPages);
 
@@ -58,7 +84,6 @@ $(document).ready(function () {
     if (visiblePage) {
       var tab = $('.tabs .tab[data-page="' + visiblePage + '"]');
       if (tab.length === 0) {
-        // Try to find the tab for the previous page if the current one isn't a direct match
         tab = $('.tabs .tab[data-page="' + (visiblePage - 1) + '"]');
       }
       tab.addClass("tab-active");
