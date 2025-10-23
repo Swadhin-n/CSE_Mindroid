@@ -22,16 +22,16 @@ body {
 .magazine-wrapper {
     width: 100%;
     max-width: 1400px;
-  margin: 1rem auto; /* replace body padding spacing */
+    margin: 1rem auto; /* replace body padding spacing */
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Keeps the child elements within the rounded corners */
+    overflow: visible; /* Allow flipbook to be fully visible */
 }
 
 /* Scrollable tab container */
 .tab-container {
-    padding: 1rem 1rem 0 1rem;
+    padding: 2rem 1rem 0 1rem;
     background-color: #f9fafb; /* A slightly off-white background for the tabs */
     border-bottom: 1px solid #e5e7eb;
     overflow-x: auto; /* Enable horizontal scroll */
@@ -56,26 +56,50 @@ body {
 
 /* Final fix: Tabs adjust to text, single line, no cut */
 .tab {
-    white-space: nowrap !important; /* Keep text in one line */
-    min-width: max-content !important; /* Auto width based on text */
-    padding: 0.5rem 1rem 2rem; /* Adequate padding for readability */
-    font-size: clamp(0.8rem, 2vw, 1.25rem); /* min, preferred, max */
+  white-space: nowrap !important; /* Keep text in one line */
+  min-width: max-content !important; /* Auto width based on text */
+  /* Reduce bottom padding to tighten gap below tabs */
+  padding: 0.5rem 1rem 0.75rem;
+  font-size: clamp(0.8rem, 2vw, 1.25rem); /* min, preferred, max */
 }
 
 /* Flipbook container */
 .flipbook-container {
-    padding: 1rem;
-    position: relative;
-}
-
-.flipbook-container {
-  position: relative; /* make buttons position relative to this container */
+  /* Reduce top padding to bring magazine closer to tabs */
+  padding: 0.5rem 1rem 1rem;
+  position: relative;
+  width: 100%;
+  /* Use grid to center the flipbook regardless of its computed width */
+  display: grid;
+  place-items: center;
 }
 
 .flipbook {
+  /* Keep the book as an intrinsic-sized item and let the container center it */
+  margin: 0 auto;
+  position: relative;
+  flex: 0 0 auto; /* if parent is flex anywhere, avoid stretching */
+  max-width: 100%;
+}
+
+/* Desktop-only nudge: add extra left padding without affecting mobile */
+@media (min-width: 1024px) {
+  .flipbook-container {
+    padding-left: 7rem;
+  }
+}
+
+/* Small screens (e.g., iPhone SE) */
+@media (max-width: 768px) {
+  .flipbook-container {
     width: 100%;
-    height: auto;
-    aspect-ratio: 842 / 595; /* Maintain aspect ratio */
+    height: 81%;
+    padding: 10px;
+    position: relative;
+    /* On small screens, align the book to the top to remove the large gap */
+    align-items: start;
+    justify-items: center;
+  }
 }
 
 .flipbook .hard {
@@ -116,6 +140,7 @@ body {
         display: flex;
         justify-content: center;
     }
+  /* Grid centering already applied above; nothing extra needed here */
 }
 
 /* --- Responsive Full-Screen Flipbook for Mobile --- */

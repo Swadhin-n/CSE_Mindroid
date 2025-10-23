@@ -10,14 +10,26 @@ $(document).ready(function () {
     var sizes = calculateSizes();
 
     flipbook.turn({
-      autoCenter: true,
+      autoCenter: true, // Enable Turn.js centering for proper display
       display: displayMode,
       width: sizes.width,
       height: sizes.height,
+      when: {
+        turned: function(event, page, view) {
+          // Ensure centering after each page turn
+          setTimeout(function() {
+            flipbook.turn("center");
+          }, 10);
+        }
+      }
     });
 
     // Ensure proper sizing initially
     updateLayout();
+    // Force initial centering
+    setTimeout(function() {
+      flipbook.turn("center");
+    }, 100);
   }
 
   // Compute available height considering fixed header and tabs
@@ -26,8 +38,8 @@ $(document).ready(function () {
     var tabs = document.querySelector('.tab-container');
     var headerH = header ? header.getBoundingClientRect().height : 0;
     var tabsH = tabs ? tabs.getBoundingClientRect().height : 0;
-    // Small padding for breathing space below
-    var extra = 24;
+    // Small padding for breathing space below (smaller on mobile)
+    var extra = window.innerWidth < 768 ? 8 : 24;
     return Math.max(320, window.innerHeight - headerH - tabsH - extra);
   }
 
@@ -39,7 +51,13 @@ $(document).ready(function () {
         height: getAvailableHeight(),
       };
     }
-    return { width: 842, height: 595 };
+    // For larger screens, calculate a sensible size based on container
+    var containerWidth = $(".flipbook-container").width();
+    var maxWidth = Math.min(containerWidth - 40, 1200); // Leave some padding, max 1200px
+    var aspectRatio = 842 / 595;
+    var width = maxWidth;
+    var height = width / aspectRatio;
+    return { width: width, height: height };
   }
 
   // Update display mode and resize dynamically
@@ -51,6 +69,11 @@ $(document).ready(function () {
 
     var sizes = calculateSizes();
     flipbook.turn("size", sizes.width, sizes.height);
+    
+    // Force centering after layout update
+    setTimeout(function() {
+      flipbook.turn("center");
+    }, 10);
   }
 
   // Initialize on page load
