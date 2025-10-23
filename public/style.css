@@ -121,8 +121,8 @@ body {
 }
 
 .flipbook-nav {
-    position: absolute;
-    bottom: 2rem;
+  position: absolute;
+  bottom: 2rem; /* desktop default */
     left: 0;
     width: 100%;
     z-index: 100;
@@ -181,7 +181,7 @@ body {
   }
 
   .flipbook-nav {
-    bottom: 1rem;
+    bottom: 3rem; /* move buttons further up on mobile only */
   }
   
   .left-btn {
