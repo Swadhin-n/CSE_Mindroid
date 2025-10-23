@@ -181,7 +181,10 @@ body {
   }
 
   .flipbook-nav {
-    bottom: 3rem; /* move buttons further up on mobile only */
+    bottom: 4rem; /* move buttons a bit further up on mobile only */
+    /* Increase distance between buttons by widening the nav overlay */
+    left: -1rem;
+    width: calc(100% + 2rem);
   }
   
   .left-btn {
