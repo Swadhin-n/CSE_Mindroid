@@ -15,14 +15,14 @@ body {
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    background: #f1f1f1; /* Lighter grey background to make the magazine pop */
-    padding: 1rem;
+  background: #f1f1f1; /* Lighter grey background to make the magazine pop */
+  padding: 0; /* allow full-bleed fixed header */
 }
 
 .magazine-wrapper {
     width: 100%;
     max-width: 1400px;
-    margin: auto;
+  margin: 1rem auto; /* replace body padding spacing */
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
@@ -37,6 +37,7 @@ body {
     overflow-x: auto; /* Enable horizontal scroll */
     white-space: nowrap; /* Prevent wrapping of tabs */
     align-content: center;
+  margin-top: 0.5rem; /* subtle gap below fixed navbar */
 }
 
 /* Hide scrollbars for cleaner look */
@@ -130,7 +131,7 @@ body {
     width: 100vw;
     height: 90vh;
     max-width: 100%;
-    margin: 0px;
+    margin: 0; /* full width on mobile; header spacing handled by spacer */
     border-radius: 0;
     box-shadow: none;
   }
@@ -143,8 +144,8 @@ body {
   }
 
   .flipbook {
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    /* Let JS set the explicit height via inline styles; avoid overriding with !important */
   }
 
   .flipbook .page,

@@ -7,23 +7,39 @@ $(document).ready(function () {
   function initFlipbook() {
     var displayMode = window.innerWidth < 768 ? "single" : "double";
 
+    var sizes = calculateSizes();
+
     flipbook.turn({
       autoCenter: true,
       display: displayMode,
-      width: window.innerWidth < 768 ? window.innerWidth : 842,
-      height: window.innerWidth < 768 ? window.innerHeight : 595,
+      width: sizes.width,
+      height: sizes.height,
     });
 
-    resizeFlipbook();
+    // Ensure proper sizing initially
+    updateLayout();
   }
 
-  // Resize the flipbook proportionally
-  function resizeFlipbook() {
-    var containerWidth = $(".flipbook-container").width();
-    var bookWidth = containerWidth;
-    var bookHeight = bookWidth / (842 / 595) / 2;
+  // Compute available height considering fixed header and tabs
+  function getAvailableHeight() {
+    var header = document.querySelector('.site-navbar');
+    var tabs = document.querySelector('.tab-container');
+    var headerH = header ? header.getBoundingClientRect().height : 0;
+    var tabsH = tabs ? tabs.getBoundingClientRect().height : 0;
+    // Small padding for breathing space below
+    var extra = 24;
+    return Math.max(320, window.innerHeight - headerH - tabsH - extra);
+  }
 
-    flipbook.turn("size", bookWidth, bookHeight * 2);
+  function calculateSizes() {
+    if (window.innerWidth < 768) {
+      var containerWidth = $(".flipbook-container").width();
+      return {
+        width: containerWidth,
+        height: getAvailableHeight(),
+      };
+    }
+    return { width: 842, height: 595 };
   }
 
   // Update display mode and resize dynamically
@@ -33,9 +49,8 @@ $(document).ready(function () {
     var mode = window.innerWidth < 768 ? "single" : "double";
     flipbook.turn("display", mode);
 
-    var newWidth = window.innerWidth < 768 ? window.innerWidth : 842;
-    var newHeight = window.innerWidth < 768 ? window.innerHeight : 595;
-    flipbook.turn("size", newWidth, newHeight);
+    var sizes = calculateSizes();
+    flipbook.turn("size", sizes.width, sizes.height);
   }
 
   // Initialize on page load
