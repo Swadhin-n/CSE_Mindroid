@@ -47,7 +47,7 @@ const Footer = () => {
                     </nav>
                 
                 <nav className="flex flex-col justify-center">
-                    <h6 className="footer-title text-lg font-bold mb-4 text-white">Social</h6>
+                    <h6 className="footer-title text-lg font-bold mb-4 text-white">Socials</h6>
                     <div className="flex gap-6">
                         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/svpcetnagpur?igsh=MTljYWpqM2Y3M21qaw==" className="hover:scale-110 transition-transform">
                             {/* Instagram SVG */}
@@ -75,7 +75,7 @@ const Footer = () => {
                                 <path fillRule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clipRule="evenodd"/>
                             </svg>
                         </a>
-                        <a className="hover:scale-110 transition-transform" href="https://www.linkedin.com/school/svpcet/" target="_blank" rel="noopener noreferrer">
+                        <a className="hover:scale-110 transition-transform" href="https://x.com/techpallottines?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer">
                             {/* LinkedIn SVG */}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

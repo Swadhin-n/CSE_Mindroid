@@ -1,8 +1,8 @@
 // Carousel.jsx
 import React, { useEffect, useRef, useState } from 'react'
-import FirstPage from "../assets/FirstPage.webp"
-import SecondPage from "../assets/IV_2A_2025.webp"
-import ThirdPage from "../assets/IV_2B_2025.webp"
+import FirstPage from "../assets/Tadoba_comp.webp"
+import SecondPage from "../assets/IV_3.webp"
+import ThirdPage from "../assets/IV_4.webp"
 import FourthPage from "/images/event_gallery/placment_orent.webp"
 import FifthPage from "../assets/ACM_Elections.webp"
 import SixthPage from "../assets/CSE_RedFm.png"
@@ -11,7 +11,7 @@ const slides = [
   {
     id: "slide1",
     img: FirstPage,
-    desc: "Mindroid Digital Magazine 2023-24",
+    desc: "Team Neural Ninjas from 3rd Year CSE has won the First Prize (₹50,000) at the Hackathon organized by BIT College, Ballarpur, in collaboration with the Tadoba Forest Association. Left to right : Aditya Yelne , Harshad Selokar , Srujan Zanjal.",
   },
   {
     id: "slide2",
@@ -21,12 +21,12 @@ const slides = [
   {
     id: "slide3",
     img: SecondPage,
-    desc: "Industrial Visit of 2nd Year Section A to RMC, Nagpur",
+    desc: "Industrial Visit of 3rd year (5th semester) students to the Air Traffic System Complex and Radar Building, ATS, Nagpur",
   },
   {
     id: "slide4",
     img: ThirdPage,
-    desc: "Industrial Visit of 2nd Year Section B to RMC, Nagpur",
+    desc: "Industrial Visit of 3rd year (5th semester) students to the Air Traffic System Complex and Radar Building, ATS, Nagpur",
   },
   {
     id: "slide5",
