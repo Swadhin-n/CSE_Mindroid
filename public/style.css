@@ -82,6 +82,11 @@ body {
   max-width: 100%;
 }
 
+/* Ensure drawer overlays above fixed header across all pages */
+.drawer-side {
+  z-index: 2000;
+}
+
 /* Desktop-only nudge: add extra left padding without affecting mobile */
 @media (min-width: 1024px) {
   .flipbook-container {
@@ -125,7 +130,7 @@ body {
   bottom: 2rem; /* desktop default */
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000; /* ensure above flipbook pages on all magazines */
     padding: 0 1rem;
     pointer-events: none; /* Allow clicks to pass through the container */
 }
