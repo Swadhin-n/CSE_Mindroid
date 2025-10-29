@@ -3,68 +3,31 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>MINDROID September 2025</title>
+  <title>MINDROID_September_2025</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="src/assets/Logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <!-- Drawer wrapper to match main site behavior -->
-  <div class="drawer">
-    <input id="mag-drawer" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content flex flex-col">
-      <!-- Site Header (fixed) -->
-      <header class="navbar site-navbar fixed top-0 left-0 right-0 z-50 w-full bg-[#050a30] shadow-lg px-4 md:px-16 py-3 flex items-center justify-between rounded-b-2xl border-b border-blue-900/60">
-        <!-- Mobile menu button opens drawer -->
-        <div class="flex-none lg:hidden">
-          <label for="mag-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </label>
-        </div>
-
-        <!-- Logo + Title (match homepage) -->
-        <div class="mx-2 flex-1 px-2 flex items-center gap-3">
-          <img src="assets/SVPCET_logo_New.webp" width="90px" class="p-1 rounded-full" alt="SVPCET logo" />
-          <div>
-            <span class="hidden sm:block text-xl md:text-2xl font-semibold tracking-tight text-blue-100">St. Vincent Pallotti College Of Engineering & Technology - Department Of Computer Science and Engineering</span>
-            <span class="block sm:hidden text-lg md:text-xl font-semibold tracking-tight text-blue-100">SVPCET - Department Of Computer Science and Engineering</span>
-          </div>
-        </div>
-
-        <!-- Desktop menu -->
-        <nav class="hidden flex-none lg:block">
-          <ul class="menu menu-horizontal gap-2">
-            <li><a href="/" class="text-blue-100 hover:text-blue-400 transition-colors duration-200 font-medium text-lg">Home</a></li>
-            <li><a href="/archives" class="text-blue-100 hover:text-blue-400 transition-colors duration-200 font-medium text-lg">Archives</a></li>
-            <li><a href="/events" class="text-blue-100 hover:text-blue-400 transition-colors duration-200 font-medium text-lg">Events</a></li>
-            <li><a href="/contact" class="text-blue-100 hover:text-blue-400 transition-colors duration-200 font-medium text-lg">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <!-- Spacer for fixed header height (approx. 84px) -->
-      <div class="pt-[84px]"></div>
-      <div class="magazine-wrapper">
+  
+  <div class="magazine-wrapper">
     <div class="tab-container overflow-x-auto whitespace-nowrap no-scrollbar">
-      <div class="tabs tabs-boxed inline-flex space-x-1 md:tabs-md sm:tabs-sm">
+      <div class="tabs tabs-boxed inline-flex space-x-2 md:tabs-md sm:tabs-sm">
         <a role="tab" class="tab" data-page="1">Cover</a>
-        <a role="tab" class="tab" data-page="3">About Us</a>
+        <a role="tab" class="tab" data-page="2">About Us</a>
         <a role="tab" class="tab" data-page="9">Co-Curriculars</a>
         <a role="tab" class="tab" data-page="17">Industry Connect</a>
         <a role="tab" class="tab" data-page="21">Extra-Curriculars</a>
         <a role="tab" class="tab" data-page="26">Student Corner</a>
-        <a role="tab" class="tab" data-page="34">Faculty's Corner</a>
-        <a role="tab" class="tab" data-page="45">Alumini's Corner</a>
-        <a role="tab" class="tab" data-page="48">Professional Forums</a>
+        <a role="tab" class="tab" data-page="34">Faculties</a>
+        <a role="tab" class="tab" data-page="46">Alumini</a>
+        <a role="tab" class="tab" data-page="48">Professional Clubs</a>
         <a role="tab" class="tab" data-page="63">Team</a>
       </div>
     </div>
-
     <div class="flipbook-container">
       <div class="flipbook">
         <div class="hard">
@@ -74,213 +37,226 @@
           <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0001.webp" alt="Page 2" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0003.webp" alt="Page 3" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0002.webp" alt="Page 3" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0004.webp" alt="Page 4" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0003.webp" alt="Page 4" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0005.webp" alt="Page 5" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0004.webp" alt="Page 5" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0006.webp" alt="Page 6" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0005.webp" alt="Page 6" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0007.webp" alt="Page 7" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0006.webp" alt="Page 7" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0008.webp" alt="Page 8" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0007.webp" alt="Page 8" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0009.webp" alt="Page 9" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0008.webp" alt="Page 9" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0010.webp" alt="Page 10" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0009.webp" alt="Page 10" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0011.webp" alt="Page 11" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0010.webp" alt="Page 11" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0012.webp" alt="Page 12" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0011.webp" alt="Page 12" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0013.webp" alt="Page 13" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0012.webp" alt="Page 13" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0014.webp" alt="Page 14" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0013.webp" alt="Page 14" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0015.webp" alt="Page 15" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0014.webp" alt="Page 15" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0016.webp" alt="Page 16" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0015.webp" alt="Page 16" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0017.webp" alt="Page 17" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0016.webp" alt="Page 17" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0018.webp" alt="Page 18" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0017.webp" alt="Page 18" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0019.webp" alt="Page 19" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0018.webp" alt="Page 19" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0020.webp" alt="Page 20" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0019.webp" alt="Page 20" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0021.webp" alt="Page 21" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0020.webp" alt="Page 21" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0022.webp" alt="Page 22" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0021.webp" alt="Page 22" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0023.webp" alt="Page 23" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0022.webp" alt="Page 23" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0024.webp" alt="Page 24" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0023.webp" alt="Page 24" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0025.webp" alt="Page 25" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0024.webp" alt="Page 25" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0026.webp" alt="Page 26" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0025.webp" alt="Page 26" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0027.webp" alt="Page 27" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0026.webp" alt="Page 27" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0028.webp" alt="Page 28" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0027.webp" alt="Page 28" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0029.webp" alt="Page 29" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0028.webp" alt="Page 29" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0030.webp" alt="Page 30" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0029.webp" alt="Page 30" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0031.webp" alt="Page 31" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0030.webp" alt="Page 31" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0032.webp" alt="Page 32" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0031.webp" alt="Page 32" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0033.webp" alt="Page 33" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0032.webp" alt="Page 33" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0034.webp" alt="Page 34" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0033.webp" alt="Page 34" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0035.webp" alt="Page 35" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0034.webp" alt="Page 35" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0036.webp" alt="Page 36" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0035.webp" alt="Page 36" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0037.webp" alt="Page 37" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0036.webp" alt="Page 37" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0038.webp" alt="Page 38" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0037.webp" alt="Page 38" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0039.webp" alt="Page 39" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0038.webp" alt="Page 39" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0040.webp" alt="Page 40" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0039.webp" alt="Page 40" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0041.webp" alt="Page 41" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0040.webp" alt="Page 41" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0042.webp" alt="Page 42" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0041.webp" alt="Page 42" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0043.webp" alt="Page 43" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0042.webp" alt="Page 43" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0044.webp" alt="Page 44" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0043.webp" alt="Page 44" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0049.webp" alt="Page 49" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0044.webp" alt="Page 45" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0050.webp" alt="Page 50" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0045.webp" alt="Page 46" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0051.webp" alt="Page 51" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0046.webp" alt="Page 47" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0052.webp" alt="Page 52" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0047.webp" alt="Page 48" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0053.webp" alt="Page 53" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0048.webp" alt="Page 49" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0054.webp" alt="Page 54" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0049.webp" alt="Page 50" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0055.webp" alt="Page 55" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0050.webp" alt="Page 51" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0056.webp" alt="Page 56" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0051.webp" alt="Page 52" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0057.webp" alt="Page 57" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0052.webp" alt="Page 53" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0058.webp" alt="Page 58" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0053.webp" alt="Page 54" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0059.webp" alt="Page 59" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0054.webp" alt="Page 55" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0060.webp" alt="Page 60" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0055.webp" alt="Page 56" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0061.webp" alt="Page 61" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0056.webp" alt="Page 57" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0062.webp" alt="Page 62" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0057.webp" alt="Page 58" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0063.webp" alt="Page 63" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0058.webp" alt="Page 59" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0064.webp" alt="Page 64" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0059.webp" alt="Page 60" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0065.webp" alt="Page 65" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0060.webp" alt="Page 61" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0066.webp" alt="Page 66" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0061.webp" alt="Page 62" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0067.webp" alt="Page 67" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0062.webp" alt="Page 63" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0068.webp" alt="Page 68" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0063.webp" alt="Page 64" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0069.webp" alt="Page 69" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0064.webp" alt="Page 65" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0070.webp" alt="Page 70" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0065.webp" alt="Page 66" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0071.webp" alt="Page 71" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0066.webp" alt="Page 67" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0072.webp" alt="Page 72" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0067.webp" alt="Page 68" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0073.webp" alt="Page 73" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0068.webp" alt="Page 69" />
         </div>
         <div>
-          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0074.webp" alt="Page 74" />
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0069.webp" alt="Page 70" />
         </div>
-         </div>
+        <div>
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0070.webp" alt="Page 71" />
+        </div>
+        <div>
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0071.webp" alt="Page 72" />
+        </div>
+        <div>
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0072.webp" alt="Page 73" />
+        </div>
+        <div>
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0073.webp" alt="Page 74" />
+        </div>
+        <div>
+          <img src="images/MINDROID_September_2025/e4f0a7f2-0a78-4390-a3bd-fc7d029dd012-0074.webp" alt="Page 75" />
         </div>
-
-     <div class="flipbook-nav flex justify-between items-center p-4">
+      </div>
+      <div class="flipbook-nav flex justify-between items-center p-4">
         <button id="prev-page-btn" class="btn btn-primary btn-circle" aria-label="Previous Page">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -292,39 +268,11 @@
           </svg>
         </button>
       </div>
-      </div>
-    </div>
-    <!-- Sidebar Drawer (matches site) -->
-    <div class="drawer-side h-full z-[100]">
-      <label for="mag-drawer" aria-label="close sidebar" class="drawer-overlay h-full"></label>
-      <ul class="menu menu-lg min-h-full w-80 p-4 bg-gradient-to-b from-[#050a30] via-[#050a30]/80 to-[#050a30]/40 backdrop-blur-lg rounded-r-2xl shadow-2xl ring-1 ring-primary/10 gap-3 overflow-y-auto">
-        <div class="flex items-center gap-2 mb-4">
-          <img src="/src/assets/SVPCET_logo_New.webp" alt="SVPCET logo" width="90px" class="p-1 rounded-full object-contain" />
-          <h3 class="text-blue-100 font-bold leading-snug">
-            St. Vincent Pallotti College of Engineering & Technology – Department
-            Of Computer Science and Engineering
-          </h3>
-        </div>
-        <li>
-          <a href="/" class="font-semibold text-blue-900 bg-blue-100/80 hover:bg-accent hover:text-white transition-colors duration-200 rounded-lg px-4 py-2">Home</a>
-        </li>
-        <li>
-          <a href="/archives" class="font-semibold text-blue-900 bg-blue-100/80 hover:bg-accent hover:text-white transition-colors duration-200 rounded-lg px-4 py-2">Archives</a>
-        </li>
-        <li>
-          <a href="/events" class="font-semibold text-blue-900 bg-blue-100/80 hover:bg-accent hover:text-white transition-colors duration-200 rounded-lg px-4 py-2">Events</a>
-        </li>
-        <li>
-          <a href="/contact" class="font-semibold text-blue-900 bg-blue-100/80 hover:bg-accent hover:text-white transition-colors duration-200 rounded-lg px-4 py-2">Contact</a>
-        </li>
-      </ul>
     </div>
   </div>
-
-
   <script src="jquery.js"></script>
   <script src="turn.js"></script>
   <script src="script.js"></script>
-
 </body>
+
 </html>
