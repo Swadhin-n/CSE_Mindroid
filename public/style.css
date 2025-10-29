@@ -75,23 +75,7 @@ body {
 }
 
 .flipbook {
-  /* Keep the book as an intrinsic-sized item and let the container center it */
-  margin: 0 auto;
-  position: relative;
-  flex: 0 0 auto; /* if parent is flex anywhere, avoid stretching */
-  max-width: 100%;
-}
-
-/* Desktop-only nudge: add extra left padding without affecting mobile */
-@media (min-width: 1024px) {
-  .flipbook-container {
-    padding-left: 7rem;
-  }
-}
-
-/* Small screens (e.g., iPhone SE) */
-@media (max-width: 768px) {
-  .flipbook-container {
+  align-items: center;
     width: 100%;
     height: auto;
     aspect-ratio: 842 / 595; /* Maintain aspect ratio */
@@ -120,7 +104,7 @@ body {
     bottom: 2rem;
     left: 0;
     width: 100%;
-    z-index: 1000; /* ensure above flipbook pages on all magazines */
+    z-index: 100;
     padding: 0 1rem;
     pointer-events: none; /* Allow clicks to pass through the container */
 }
@@ -191,5 +175,4 @@ body {
     height: 40px;
   }
 }
-
 
