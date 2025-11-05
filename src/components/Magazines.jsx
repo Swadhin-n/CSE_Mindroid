@@ -7,7 +7,7 @@ const magazines = [
         month: "October",
         year: "2025",
         cover: "images/event_gallery/Infinity_2k25.webp",
-        goto: "",
+        goto: "mindroid_october_2025.html",
     },
     {
     title: "Mindroid 2025 September       ",
