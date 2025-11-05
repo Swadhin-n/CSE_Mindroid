@@ -1,7 +1,15 @@
 import React from 'react';
 
 const magazines = [
-     {
+    {
+        title: "Mindroid 2025 October       ",
+        description: "",
+        month: "October",
+        year: "2025",
+        cover: "images/event_gallery/Infinity_2k25.webp",
+        goto: "mindroid_october_2025.html",
+    },
+    {
     title: "Mindroid 2025 September       ",
     description: "",
     month: "September",
