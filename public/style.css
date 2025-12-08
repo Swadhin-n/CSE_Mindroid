@@ -26,8 +26,10 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Keeps the child elements within the rounded corners */
+    overflow-x: hidden;
+    overflow-y: visible;
 }
+
 
 /* Scrollable tab container */
 .tab-container {
@@ -57,7 +59,7 @@ body {
 .tab {
     white-space: nowrap !important; /* Keep text in one line */
     min-width: max-content !important; /* Auto width based on text */
-    padding: 0.5rem 1rem 2rem; /* Adequate padding for readability */
+    padding: 0.5rem 1rem 0.75rem; /* Adequate padding for readability */
     font-size: clamp(0.8rem, 2vw, 1.25rem); /* min, preferred, max */
 }
 
@@ -174,3 +176,4 @@ body {
     width: 40px;
     height: 40px;
   }
+}

@@ -5,12 +5,19 @@ const encodePath = (path) => {
 }
 
 const magazines = [
-   {
+  {
+    title: "Mindroid 2025 November",
+    month: "November",
+    year: "2025",
+    cover: "/images/MINDROID_July-August_2024-25/MINDROID_July-August_2024-25_1.webp",
+    goto: "/mindroid_november_2025.html",
+  }, 
+  {
         title: "Mindroid 2025 October       ",
         description: "",
         month: "October",
         year: "2025",
-        cover: "images/event_gallery/Infinity_2k25.webp",
+        cover: "/images/event_gallery/Infinity_2k25.webp",
         goto: "/mindroid_october_2025.html",
     },
    {
@@ -21,13 +28,6 @@ const magazines = [
     cover: "/images/MINDROID_September_2025/Sept_IIM_NGP.jpeg",
     goto: "/mindroid_september_2025.html",
     },
-  {
-    title: "Mindroid 2025 July-August",
-    month: "July-August",
-    year: "2025",
-    cover: "/images/MINDROID_July-August_2024-25/MINDROID_July-August_2024-25_1.webp",
-    goto: "/mindroid_july-august_2025.html",
-  },
 
 ];
 const Card = () => {
