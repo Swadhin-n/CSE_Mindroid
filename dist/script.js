@@ -3,26 +3,90 @@ $(document).ready(function () {
   var prevBtn = $("#prev-page-btn");
   var nextBtn = $("#next-page-btn");
 
-  function resizeFlipbook() {
-    var containerWidth = $(".flipbook-container").width();
-    var bookWidth = containerWidth;
-    var bookHeight = bookWidth / (842 / 595) / 2;
+  // Initialize Turn.js with responsive settings
+  function initFlipbook() {
+    var displayMode = window.innerWidth < 768 ? "single" : "double";
 
-    flipbook.turn("size", bookWidth, bookHeight * 2);
+    var sizes = calculateSizes();
+
+    flipbook.turn({
+      autoCenter: true, // Enable Turn.js centering for proper display
+      display: displayMode,
+      width: sizes.width,
+      height: sizes.height,
+      when: {
+        turned: function(event, page, view) {
+          // Ensure centering after each page turn
+          setTimeout(function() {
+            flipbook.turn("center");
+          }, 10);
+        }
+      }
+    });
+
+    // Ensure proper sizing initially
+    updateLayout();
+    // Force initial centering
+    setTimeout(function() {
+      flipbook.turn("center");
+    }, 100);
   }
 
-  flipbook.turn({
-    autoCenter: true,
-    width: 842,
-    height: 595,
-  });
+  // Compute available height considering fixed header and tabs
+  function getAvailableHeight() {
+    var header = document.querySelector('.site-navbar');
+    var tabs = document.querySelector('.tab-container');
+    var headerH = header ? header.getBoundingClientRect().height : 0;
+    var tabsH = tabs ? tabs.getBoundingClientRect().height : 0;
+    // Small padding for breathing space below (smaller on mobile)
+    var extra = window.innerWidth < 768 ? 8 : 24;
+    return Math.max(320, window.innerHeight - headerH - tabsH - extra);
+  }
 
+  function calculateSizes() {
+    if (window.innerWidth < 768) {
+      var containerWidth = $(".flipbook-container").width();
+      return {
+        width: containerWidth,
+        height: getAvailableHeight(),
+      };
+    }
+    // For larger screens, calculate a sensible size based on container
+    var containerWidth = $(".flipbook-container").width();
+    var maxWidth = Math.min(containerWidth - 40, 1200); // Leave some padding, max 1200px
+    var aspectRatio = 842 / 595;
+    var width = maxWidth;
+    var height = width / aspectRatio;
+    return { width: width, height: height };
+  }
+
+  // Update display mode and resize dynamically
+  function updateLayout() {
+    if (!flipbook.data("turn")) return;
+
+    var mode = window.innerWidth < 768 ? "single" : "double";
+    flipbook.turn("display", mode);
+
+    var sizes = calculateSizes();
+    flipbook.turn("size", sizes.width, sizes.height);
+    
+    // Force centering after layout update
+    setTimeout(function() {
+      flipbook.turn("center");
+    }, 10);
+  }
+
+  // Initialize on page load
+  initFlipbook();
+
+  // Handle resize/orientation changes
   $(window)
-    .on("resize", function () {
-      resizeFlipbook();
+    .on("resize orientationchange", function () {
+      updateLayout();
     })
     .trigger("resize");
 
+  // Navigation buttons
   prevBtn.on("click", function () {
     flipbook.turn("previous");
   });
@@ -40,7 +104,7 @@ $(document).ready(function () {
     $(this).addClass("tab-active");
   });
 
-  // Set initial active tab and button states
+  // Initial active tab
   $('.tabs .tab[data-page="1"]').addClass("tab-active");
   prevBtn.prop("disabled", true);
 
@@ -48,7 +112,7 @@ $(document).ready(function () {
   flipbook.bind("turned", function (event, page, view) {
     var totalPages = flipbook.turn("pages");
 
-    // Update buttons
+    // Update button states
     prevBtn.prop("disabled", page === 1);
     nextBtn.prop("disabled", page === totalPages);
 
@@ -58,7 +122,6 @@ $(document).ready(function () {
     if (visiblePage) {
       var tab = $('.tabs .tab[data-page="' + visiblePage + '"]');
       if (tab.length === 0) {
-        // Try to find the tab for the previous page if the current one isn't a direct match
         tab = $('.tabs .tab[data-page="' + (visiblePage - 1) + '"]');
       }
       tab.addClass("tab-active");

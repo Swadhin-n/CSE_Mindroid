@@ -21,32 +21,64 @@ body {
 
 .magazine-wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Keeps the child elements within the rounded corners */
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
+
+
+/* Scrollable tab container */
 .tab-container {
     padding: 1rem 1rem 0 1rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     background-color: #f9fafb; /* A slightly off-white background for the tabs */
     border-bottom: 1px solid #e5e7eb;
+    overflow-x: auto; /* Enable horizontal scroll */
+    white-space: nowrap; /* Prevent wrapping of tabs */
+    align-content: center;
+}
+
+/* Hide scrollbars for cleaner look */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 
 .tabs {
     display: inline-flex;
+    gap: 0.5rem; /* Space between tabs */
 }
 
+/* Final fix: Tabs adjust to text, single line, no cut */
+.tab {
+    white-space: nowrap !important; /* Keep text in one line */
+    min-width: max-content !important; /* Auto width based on text */
+    padding: 0.5rem 1rem 0.75rem; /* Adequate padding for readability */
+    font-size: clamp(0.8rem, 2vw, 1.25rem); /* min, preferred, max */
+}
+
+/* Flipbook container */
 .flipbook-container {
     padding: 1rem;
     position: relative;
 }
 
+.flipbook-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: relative; /* make buttons position relative to this container */
+}
+
 .flipbook {
+  align-items: center;
     width: 100%;
     height: auto;
     aspect-ratio: 842 / 595; /* Maintain aspect ratio */
@@ -82,4 +114,67 @@ body {
 
 .flipbook-nav .btn {
     pointer-events: auto; /* Make buttons clickable */
+}
+
+/* Center tabs on larger screens */
+@media (min-width: 768px) {
+    .tab-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* --- Responsive Full-Screen Flipbook for Mobile --- */
+@media (max-width: 768px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* prevent scrolling gaps */
+  }
+
+  .magazine-wrapper {
+    width: 100vw;
+    height: 90vh;
+    max-width: 100%;
+    margin: 100px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .flipbook-container {
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .flipbook {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .flipbook .page,
+  .flipbook .page img {
+    width: 100%;
+    height: 85%;
+    object-fit: contain; /* ensure image fits nicely */
+  }
+
+  .flipbook-nav {
+    bottom: 1rem;
+  }
+  
+  .left-btn {
+    left: 10px;
+  }
+
+  .right-btn {
+    right: 10px;
+  }
+
+  .flipbook-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
 }
