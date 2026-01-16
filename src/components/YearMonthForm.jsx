@@ -6,15 +6,27 @@ const YearMonthForm = () => {
   const [selectedMonth, setSelectedMonth] = useState("");
 
   const allMonths = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   // Special month list depending on year selection
   const monthOptions =
-    selectedYear === "2023-2024" ? ["Jan - Dec"] :
-    selectedYear === "2025" ? ["November","October","September","July - August"] :
-    allMonths;
+    selectedYear === "2023-2024"
+      ? ["Jan - Dec"]
+      : selectedYear === "2025"
+      ? ["December","November", "October", "September", "July - August"]
+      : allMonths;
 
   const handleSubmit = (e) => {
     e.preventDefault(); // prevent page reload
@@ -25,19 +37,20 @@ const YearMonthForm = () => {
       window.location.href = "/mindroid_23-24.html";
     } else if (selectedYear === "2025" && selectedMonth === "July - August") {
       window.location.href = "/mindroid_july-august_2025.html";
-    }else if (selectedYear === "2025" && selectedMonth === "September") {
+    } else if (selectedYear === "2025" && selectedMonth === "September") {
       window.location.href = "/mindroid_september_2025.html";
     } else if (selectedYear === "2025" && selectedMonth === "October") {
       window.location.href = "/mindroid_october_2025.html";
     } else if (selectedYear === "2025" && selectedMonth === "November") {
       window.location.href = "/mindroid_november_2025.html";
-    }
-    else {
+    } else if (selectedYear === "2025" && selectedMonth === "December") {
+      window.location.href = "/mindroid_december_2025.html";
+    } else {
       alert(`No Magazine available!`);
     }
-  }
+  };
 
-   return (
+  return (
     <form
       onSubmit={handleSubmit}
       className="bg-center bg-no-repeat h-auto flex flex-col md:flex-row gap-6 items-center justify-center my-10 bg-base-100/70 backdrop-blur-md p-6 rounded-2xl shadow-xl ring-1 ring-primary/10 form"
@@ -46,17 +59,22 @@ const YearMonthForm = () => {
       {/* Year Dropdown */}
       <div className="form-control w-full max-w-xs">
         <label className="label">
-          <span className="label-text text-primary font-semibold text-[#050a30]">Year</span>
+          <span className="label-text text-primary font-semibold text-[#050a30]">
+            Year
+          </span>
         </label>
         <select
-          className="select select-bordered select-primary bg-[#050a30] focus:outline-none text-zinc-100"
+          className="select select-bordered select-primary bg-[#050a30] text-zinc-100 
+           px-4 py-2 leading-relaxed"
           value={selectedYear}
           onChange={(e) => {
             setSelectedYear(e.target.value);
             setSelectedMonth(""); // reset month when year changes
           }}
         >
-          <option value="" disabled>Pick a year</option>
+          <option value="" disabled>
+            Pick a year
+          </option>
           <option>2023-2024</option>
           <option>2025</option>
         </select>
@@ -65,14 +83,19 @@ const YearMonthForm = () => {
       {/* Month Dropdown */}
       <div className="form-control w-full max-w-xs">
         <label className="label">
-          <span className="label-text text-primary font-semibold text-[#050a30]">Month</span>
+          <span className="label-text text-primary font-semibold text-[#050a30]">
+            Month
+          </span>
         </label>
         <select
-          className="select select-bordered select-primary bg-[#050a30] focus:outline-none text-zinc-100"
+          className="select select-bordered select-primary bg-[#050a30] text-zinc-100 
+           px-4 py-2 leading-relaxed"
           value={selectedMonth}
           onChange={(e) => setSelectedMonth(e.target.value)}
         >
-          <option value="" disabled>Pick a month</option>
+          <option value="" disabled>
+            Pick a month
+          </option>
           {monthOptions.map((month, idx) => (
             <option key={idx}>{month}</option>
           ))}
@@ -82,7 +105,7 @@ const YearMonthForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="btn bg-[#f77416] text-white mt-6 md:mt-8 w-full md:w-auto"
+        className="btn bg-[#f77416] text-white mt-6 md:mt-8 w-full md:w-auto  px-4 py-2"
       >
         Get Magazine
       </button>

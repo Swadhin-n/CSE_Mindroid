@@ -6,6 +6,13 @@ const encodePath = (path) => {
 
 const magazines = [
   {
+    title: "Mindroid 2025 December",
+    month: "December",
+    year: "2025",
+    cover: "/images/MINDROID_July-August_2024-25/MINDROID_July-August_2024-25_1.webp",
+    goto: "/mindroid_december_2025.html",
+  }, 
+  {
     title: "Mindroid 2025 November",
     month: "November",
     year: "2025",
@@ -19,14 +26,6 @@ const magazines = [
         year: "2025",
         cover: "/images/event_gallery/Infinity_2k25.webp",
         goto: "/mindroid_october_2025.html",
-    },
-   {
-    title: "Mindroid 2025 September       ",
-    description: "",
-    month: "September",
-    year: "2025",
-    cover: "/images/MINDROID_September_2025/Sept_IIM_NGP.jpeg",
-    goto: "/mindroid_september_2025.html",
     },
 
 ];
@@ -47,7 +46,10 @@ const Card = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title text-blue-200">{mag.title}</h2>
+                <h2 className="card-title text-blue-200 text-[18px] font-bold">
+  {mag.title}
+</h2>
+
                 <p className="text-blue-100">{mag.description}</p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="badge bg-blue-900 text-blue-100 border-blue-700 dark:border-gray-600 px-3 py-2">

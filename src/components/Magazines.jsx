@@ -1,6 +1,13 @@
 import React from 'react';
 
 const magazines = [
+    {
+    title: "Mindroid 2025 December",
+    month: "December",
+    year: "2025",
+    cover: "/images/MINDROID_July-August_2024-25/MINDROID_July-August_2024-25_1.webp",
+    goto: "/mindroid_december_2025.html",
+  },
      {
     title: "Mindroid 2025 November",
     month: "November",
@@ -59,7 +66,9 @@ const Magazines = () => {
                             />
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title text-blue-200">{mag.title}</h2>
+                            <h2 className="card-title text-blue-200 text-[18px] font-bold">
+  {mag.title}
+</h2>
                             <p className="text-blue-100">{mag.description}</p>
                             <div className="mt-4 flex items-center justify-between">
                                 <span className="badge bg-blue-900 text-blue-100 border-blue-700 px-3 py-2">

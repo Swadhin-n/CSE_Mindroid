@@ -20,11 +20,6 @@ const Footer = () => {
                             <p className="font-semibold text-white text-sm">Nikita Bhushanwar</p>
                             <a href="mailto:niktabhushanwar03@gmail.com" className="text-blue-400 hover:underline text-sm">niktabhushanwar03@gmail.com</a>
                             <a href="tel:+919767445679" className="text-blue-400 hover:underline text-sm">+91 97674 45679</a>
-                        </div>
-                        <div className="flex flex-col bg-gray-800/50 p-4 rounded-lg">
-                            <p className="font-semibold text-white text-sm">Ethan Anthony</p>
-                            <a href="mailto:e10anthony345@gmail.com" className="text-blue-400 hover:underline text-sm">e10.anthony345@gmail.com</a>
-                            <a href="tel:+918888080345" className="text-blue-400 hover:underline text-sm">+91 88880 80345</a>
                         </div>  
                     </div>
                 </nav>
