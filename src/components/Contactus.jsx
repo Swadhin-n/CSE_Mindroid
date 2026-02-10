@@ -134,11 +134,6 @@ export default function Contact() {
               <p className="text-gray-400"><a href="mailto:niktabhushanwar03@gmail.com" className="text-blue-400 hover:underline">niktabhushanwar03@gmail.com</a></p>
               <p className="text-gray-400"><a href="tel:+919767445679" className="text-blue-400 hover:underline">+91 97674 45679</a></p>
             </div>
-            <div className="bg-gray-800/50 p-4 rounded-lg flex flex-col items-center">
-              <p className="font-semibold text-white">Ethan Anthony</p>
-              <p className="text-gray-400"><a href="mailto:e10anthony345@gmail.com" className="text-blue-400 hover:underline">e10.anthony345@gmail.com</a></p>
-              <p className="text-gray-400"><a href="tel:+918888080345" className="text-blue-400 hover:underline">+91 88880 80345</a></p>
-            </div>
           </div>
         </div>
       </div>
