@@ -122,11 +122,6 @@ npm run build
 npm run preview
 ```
 
-### Lint
-```bash
-npm run lint
-```
-
 ### Next Steps
 1. Update content and assets for the latest events or magazine releases.
 2. Edit routes or components if new pages are needed.
