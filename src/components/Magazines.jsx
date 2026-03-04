@@ -2,9 +2,16 @@ import React from 'react';
 
 const magazines = [
     {
+    title: "Mindroid 2026 February",
+    month: "February",
+    year: "2026",
+    cover: "/images/MINDROID_February_2026/MINDROID_February_2026_1.webp",
+    goto: "/mindroid_february_2026.html",
+  }, 
+    {
     title: "Mindroid 2026 January",
     month: "January",
-    year: "2025",
+    year: "2026",
     cover: "/images/MINDROID_July-August_2024-25/MINDROID_July-August_2024-25_1.webp",
     goto: "/mindroid_january_2026.html",
   },
@@ -31,7 +38,7 @@ const magazines = [
         goto: "mindroid_october_2025.html",
     },
     {
-    title: "Mindroid 2025 September       ",
+    title: "Mindroid 2025 September",
     description: "",
     month: "September",
     year: "2025",
