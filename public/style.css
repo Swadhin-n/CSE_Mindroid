@@ -144,7 +144,11 @@ body {
 
   .flipbook-container {
     width: 100%;
+<<<<<<< Updated upstream
     height: 90%;
+=======
+    height: 75%;
+>>>>>>> Stashed changes
     padding: 10px;
     position: relative;
   }
@@ -157,8 +161,13 @@ body {
   .flipbook .page,
   .flipbook .page img {
     width: 100%;
+<<<<<<< Updated upstream
     height: 85%;
     object-fit: contain; /* ensure image fits nicely */
+=======
+    height: 90%;
+    object-fit: fill; /* ensure image fits nicely */
+>>>>>>> Stashed changes
   }
 
   .flipbook-nav {
