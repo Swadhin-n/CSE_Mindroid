@@ -143,6 +143,59 @@ npm run preview
 - Vercel is supported via [vercel.json](vercel.json).
 - Any static host that supports SPA rewrites and serves the `dist/` folder will work.
 
+### Fast Deploy to College Server (SSH + rsync)
+Use this if your main deployment is on your college server and you want faster repeat deploys.
+
+1. Build locally once:
+```bash
+npm run build:prod
+```
+
+2. Create a local `.env.deploy` file (recommended):
+```bash
+cp .env.deploy.example .env.deploy
+```
+
+Then edit `.env.deploy` with your server details:
+```bash
+COLLEGE_SSH_HOST="your.server.edu"
+COLLEGE_SSH_USER="your_username"
+COLLEGE_WEB_ROOT="/var/www/cse-mindroid"
+COLLEGE_SSH_PORT="22"
+```
+
+Alternative: you can still export these in shell/profile.
+
+3. One-time passwordless SSH setup:
+```bash
+npm run setup:college:ssh
+```
+
+4. One-time local alias setup (`deploy-college` command):
+```bash
+npm run setup:college:alias
+source ~/.zprofile
+```
+
+5. Deploy with incremental sync:
+```bash
+npm run deploy:college:quick
+```
+
+Or build + deploy in one command:
+```bash
+npm run deploy:college
+```
+
+Why this is faster:
+- `rsync` uploads only changed files.
+- `--delete` removes old files from the server automatically.
+- No server-side Node.js install/build step is required.
+
+### Asset Optimization Note
+- The carousel image previously used `src/assets/CSE_RedFm.png` (~9.5 MB).
+- It is now optimized as `src/assets/CSE_RedFm_optimized.jpg` (~1.7 MB), reducing build output and upload time.
+
 ## Credits
 - Created by Swadhin Upadhyay and Nikita Bhushanwar.
 - Department of Computer Science and Engineering, SVPCET, Nagpur.

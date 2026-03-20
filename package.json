@@ -6,8 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prod": "vite build --mode production",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:college": "npm run build:prod && sh ./scripts/deploy-college.sh",
+    "deploy:college:quick": "sh ./scripts/deploy-college.sh",
+    "setup:college:ssh": "sh ./scripts/setup-college-ssh.sh",
+    "setup:college:alias": "sh ./scripts/setup-deploy-alias.sh"
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",

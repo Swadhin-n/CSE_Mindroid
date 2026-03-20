@@ -5,7 +5,7 @@ import SecondPage from "../assets/IV_3.webp"
 import ThirdPage from "../assets/IV_4.webp"
 import FourthPage from "/images/event_gallery/placment_orent.webp"
 import FifthPage from "../assets/ACM_Elections.webp"
-import SixthPage from "../assets/CSE_RedFm.png"
+import SixthPage from "../assets/CSE_RedFm_optimized.jpg"
 
 const slides = [
   {
