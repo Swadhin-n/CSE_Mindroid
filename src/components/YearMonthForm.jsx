@@ -27,7 +27,7 @@ const monthOptions =
     : selectedYear === "2025"
     ? ["December", "November", "October", "September", "July - August"]
     : selectedYear === "2026"
-    ? ["January", "February"]
+    ? ["January", "February", "March"]
     : allMonths;
 
 
@@ -52,6 +52,8 @@ const monthOptions =
       window.location.href = "/mindroid_january_2026.html";
     } else if (selectedYear === "2026" && selectedMonth === "February") {
       window.location.href = "/mindroid_february_2026.html";
+    } else if (selectedYear === "2026" && selectedMonth === "March") {
+      window.location.href = "/mindroid_march_2026.html";
     } else {
       alert(`No Magazine available!`);
     }

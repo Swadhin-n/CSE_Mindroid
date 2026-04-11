@@ -2,6 +2,13 @@ import React from 'react';
 
 const magazines = [
     {
+    title: "Mindroid 2026 March",
+    month: "March",
+    year: "2026",
+    cover: "/images/MINDROID_March_2026/MINDROID_March_2026_1.webp",
+    goto: "/mindroid_march_2026.html",
+  }, 
+    {
     title: "Mindroid 2026 February",
     month: "February",
     year: "2026",
